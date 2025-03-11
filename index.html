@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GetFit</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Catamaran:wght@200&family=Courgette&family=Lato:wght@300;900&family=Mulish:wght@300&family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f30fac2c61.js" crossorigin="anonymous"></script>
+    
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Navigation -->
+        <nav>
+            <div class="logo">
+                <h1>GetFit</h1>
+            </div>
+            <ul>
+                <li><a href="#main">HOME</a></li>
+                <li><a href="#program">PROGRAM</a></li>
+                <li><a href="#plan">PLAN</a></li>
+                <li><a href="#blog">BLOG</a></li>
+                <li><a href="#contact">CONTACT US</a></li>
+                <button id="joinButton">Join Now</button>
+            </ul>
+        </nav>
+
+        <!-- Main Section -->
+        <section id="main" class="main">
+            <div class="mainText">
+                <h1>Commit To Be Fit</h1>
+                <h3>Achieve Your Fitness Goals with Us</h3>
+                <p>Whether you're looking to lose weight, build muscle, or stay healthy, our programs are tailored to suit every need. Start your fitness journey today!</p>
+                <button id="joinNowMain">Join Now</button>
+            </div>
+            <img class="men" src="men.png" alt="Fitness Journey">
+        </section>
+
+        <!-- Program Section -->
+        <section id="program" class="program">
+            <div class="head">
+                <h1>Our <span>Programs</span></h1>
+            </div>
+            <div class="ourProgram">
+                <div class="crd" onclick="showProgramDetails('Dance')">
+                    <img src="dance.webp" alt="Dance Program">
+                    <h2>Dance</h2>
+                    <p>Our dance program is designed to improve your flexibility, coordination, and endurance. Perfect for those looking to combine fun with fitness.</p>
+                </div>
+                <div class="crd" onclick="showProgramDetails('Cardio')">
+                    <img src="cardio.webp" alt="Cardio Program">
+                    <h2>Cardio</h2>
+                    <p>Cardio exercises are ideal for improving cardiovascular health. Join our cardio classes to enhance your stamina and burn calories effectively.</p>
+                </div>
+                <div class="crd" onclick="showProgramDetails('Heavy Workout')">
+                    <img src="heavy.webp" alt="Heavy Workout Program">
+                    <h2>Heavy Workout</h2>
+                    <p>If you're looking to build muscle and strength, our heavy workout program is for you. Target multiple muscle groups for optimal results.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Plans Section -->
+        <section id="plan" class="plans">
+            <div class="head">
+                <h1>Our <span>Plans</span></h1>
+            </div>
+            <div class="ourPlans">
+                <div class="card" onclick="showPlanDetails('Basic')">
+                    <i class="fa-brands fa-simplybuilt"></i>
+                    <h3>Basic Package</h3>
+                    <h1>30 Days for $10</h1>
+                    <p>No Personal Trainer</p>
+                    <button class="joinNowBtn" onclick="openJoinForm('Basic')">Join Now</button>
+                </div>
+                <div class="card" onclick="showPlanDetails('Premium')">
+                    <i class="fa-solid fa-right-to-bracket"></i>
+                    <h3>Premium Package</h3>
+                    <h1>30 Days for $30</h1>
+                    <p>Personal Trainer Included</p>
+                    <button class="joinNowBtn" onclick="openJoinForm('Premium')">Join Now</button>
+                </div>
+                <div class="card" onclick="showPlanDetails('Diamond')">
+                    <i class="fa-solid fa-diamond"></i>
+                    <h3>Diamond Package</h3>
+                    <h1>30 Days for $20</h1>
+                    <p>Includes 1 Week Personal Trainer</p>
+                    <button class="joinNowBtn" onclick="openJoinForm('Diamond')">Join Now</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Section -->
+        <section id="blog" class="blog">
+            <div class="head">
+                <h1>Fitness <span>Blog</span></h1>
+            </div>
+            <div class="blogContent">
+                <div class="blogCard">
+                    <img src="blog1.jpg" alt="Blog 1">
+                    <div class="blogText">
+                        <h2>Fitness Tips for Beginners</h2>
+                        <p>Start your fitness journey with these essential tips. Learn how to build a routine, stay motivated, and avoid common mistakes.</p>
+                        <a href="#">Read More</a>
+                    </div>
+                </div>
+                <div class="blogCard">
+                    <img src="blog5.jpg" alt="Blog 2">
+                    <div class="blogText">
+                        <h2>Diet Plans for Athletes</h2>
+                        <p>Fuel your workouts with a nutrition plan designed for athletes. Learn how to eat for performance and recovery.</p>
+                        <a href="#">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="head">
+                <h1>Let's <span>Begin</span> Your Fitness Journey</h1>
+                <h2>Contact <span>Us</span></h2>
+            </div>
+            <form id="contactForm">
+                <input type="text" id="name" placeholder="Enter Name" required><br>
+                <input type="text" id="number" placeholder="Enter Mobile Number" required><br>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="footerText">
+                <h2>About Us</h2>
+                <p>GetFit is a fitness platform committed to helping you reach your goals. We offer personalized programs, expert trainers, and a supportive community.</p>
+            </div>
+            <div class="footerText">
+                <h2>Plans</h2>
+                <p>Affordable and flexible plans to suit all fitness levels and budgets.</p>
+            </div>
+            <div class="footerText">
+                <h2>Programs</h2>
+                <p>Dance, Cardio, and Heavy Workouts – Choose the program that fits your fitness goals.</p>
+            </div>
+            <div class="footerText">
+                <h2>Contact Us</h2>
+                <p>Have questions? Reach out to us for more information on our programs and plans.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Join Now Form Modal -->
+    <div id="joinFormModal" class="joinFormModal">
+        <div class="joinFormContent">
+            <span class="closeBtn" onclick="closeJoinForm()">&times;</span>
+            <h2>Join the <span id="planName">Plan</span></h2>
+            <form id="joinForm">
+                <input type="text" placeholder="Full Name" required><br>
+                <input type="email" placeholder="Email Address" required><br>
+                <input type="number" placeholder="Phone Number" required><br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Link to external JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
